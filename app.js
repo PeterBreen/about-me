@@ -5,7 +5,7 @@ console.log('userName is ' + userName);
 //first question
 var beenJoshuaTree = prompt('Have I ever been to Joshua Tree?');
 if ((beenJoshuaTree.toLowerCase() === 'yes') || (beenJoshuaTree.toLowerCase() === 'y')) {
-  alert(userName + ', that is right! I have been to Joshua tree.');
+  alert(userName + ', that is right! I have been to Joshua Tree.');
   console.log('Q1: ' + userName + ', that is right! I have been to Joshua Tree.');
 } else if ((beenJoshuaTree.toLowerCase() === 'no') || (beenJoshuaTree.toLowerCase() === 'n')) {
   alert('Sorry, ' + userName + ' that is not correct. I have been to Joshua Tree.');
@@ -34,7 +34,7 @@ if ((runBadCommand.toLowerCase() === 'yes') || (runBadCommand.toLowerCase() === 
   alert(userName + ', are you kidding? I will never do that.');
   console.log('Q3: ' + userName + ', are you kidding? I will never run that command.');
 } else if ((runBadCommand.toLowerCase() === 'no') || (runBadCommand.toLowerCase() === 'n')) {
-  alert('Absolutely, ' + userName + ' that command is crazy. Not even once.');
+  alert('Absolutely, ' + userName + '! that command is crazy. Not even once.');
   console.log('Q3: Absolutely, ' + userName + ', that command is crazy. Not even once.');
 } else {
   alert('Please answer with either yes/no or y/n.');
@@ -47,7 +47,7 @@ if ((haveSibling.toLowerCase() === 'yes') || (haveSibling.toLowerCase() === 'y')
   alert(userName + ', that is right! I have an older brother.');
   console.log('Q4: ' + userName + ', that is right! I have an older brother.');
 } else if ((haveSibling.toLowerCase() === 'no') || (haveSibling.toLowerCase() === 'n')) {
-  alert('Sorry, ' + userName + ' that is not correct. I have an older brother.');
+  alert('Sorry, ' + userName + ', that is not correct. I have an older brother.');
   console.log('Q4: Sorry, ' + userName + ', that is not correct. I have an older brother.');
 } else {
   alert('Please answer with either yes/no or y/n.');
@@ -71,7 +71,7 @@ if ((seenStarTrek.toLowerCase() === 'yes') || (seenStarTrek.toLowerCase() === 'y
     console.log('Q6: Please answer with either yes/no or y/n.');
   }
 } else if ((seenStarTrek.toLowerCase() === 'no') || (seenStarTrek.toLowerCase() === 'n')) {
-  alert('No problem, ' + userName + ' thank you for answering my quiz!');
+  alert('No problem, ' + userName + ', thank you for answering my quiz!');
   console.log('Q5: No problem, ' + userName + ', thank you for answering my quiz!');
 } else {
   alert('Please answer with either yes/no or y/n.');
