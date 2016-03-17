@@ -3,7 +3,7 @@ alert('Nice to meet you, ' + userName + '.');
 console.log('userName is ' + userName);
 
 var correctGuesses = 0;
-/*
+
 //first question
 var beenJoshuaTree = prompt('Have I ever been to Joshua Tree?');
 if (beenJoshuaTree.toLowerCase() === 'yes' || beenJoshuaTree.toLowerCase() === 'y') {
@@ -91,8 +91,8 @@ if (seenStarTrek.toLowerCase() === 'yes' || seenStarTrek.toLowerCase() === 'y') 
   alert('Please answer with either yes/no or y/n.');
   console.log('Q5: Please answer with either yes/no or y/n.');
 }
-*/
-//seventh question - four attempts to guess the number */
+
+//seventh question - four attempts to guess the number
 var guessYearCount = 0;
 var userGuess;
 while (guessYearCount < 4) {
@@ -111,18 +111,16 @@ while (guessYearCount < 4) {
     console.log('isNaN guess: ' + userGuess + ' guess number: ' + guessYearCount);
     alert('Please enter a number, like 2016, not ...whatever you just did.');
     guessYearCount++;
-  } else if (userGuess < 1983) {
+  } else {
     alert('Your guess was too low. Try a higher number.');
     console.log('User Guessed Too Low: ' + userGuess + ' on guess number ' + guessYearCount);
     guessYearCount++;
-  } else {
-    alert('You broke something, because you should not see this message. Sorry! Ask a TA.');
-    console.log('You broke something, because you should not see this message. Sorry! Ask a TA.');
   }
 }
 if (userGuess !== 1983 && guessYearCount === 4) {
   alert('You ran out of guesses! Sorry.');
 }
+
 //eighth question - collect five strin gs and put in array */
 var favoriteGamesArray = [];
 var numberGamesEntered = 0;
