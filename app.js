@@ -121,11 +121,17 @@ if (userGuess !== 1983 && guessYearCount === 4) {
   alert('You ran out of guesses! Sorry.');
 }
 
-//eighth question - collect five strin gs and put in array */
+//eighth question - collect five strings and put in array */
 var favoriteGamesArray = [];
 var numberGamesEntered = 0;
 var currentGameEntry;
-
+for (i = 0; i < 5; i++) {
+  currentGameEntry = prompt('Please enter one of your favorite board games. I am asking for a total of five.');
+  favoriteGamesArray.push(currentGameEntry);
+  console.log('Current game entry: ' + currentGameEntry);
+  console.log('Current array status: ' + favoriteGamesArray);
+}
 /*end of game: tell user how well they did */
 alert(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...?');
 console.log(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...?');
+alert(userName + ', your favorite games are ' + favoriteGamesArray);
