@@ -108,8 +108,8 @@ while (guessYearCount < 4) {
     console.log('User Guessed Too High: ' + userGuess + ' on guess number ' + guessYearCount);
     guessYearCount++;
   } else if (Number.isNaN(userGuess) === true) {
-    console.log('isNaN guess: ' + userGuess + ' guess number: ' + guessYearCount);
     alert('Please enter a number, like 2016, not ...whatever you just did.');
+    console.log('isNaN guess: ' + userGuess + ' guess number: ' + guessYearCount);
     guessYearCount++;
   } else {
     alert('Your guess was too low. Try a higher number - I am not that old.');
@@ -123,7 +123,6 @@ if (userGuess !== 1983 && guessYearCount === 4) {
 
 //eighth question - collect five strings and put in array */
 var favoriteGamesArray = [];
-var numberGamesEntered = 0;
 var currentGameEntry;
 for (i = 0; i < 5; i++) {
   currentGameEntry = prompt('Please enter one of your favorite games. I am asking for a total of five.');
@@ -131,6 +130,7 @@ for (i = 0; i < 5; i++) {
   console.log('Current game entry: ' + currentGameEntry);
   console.log('Current array status: ' + favoriteGamesArray);
 }
+
 /*end of game: tell user how well they did */
 alert(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...? Also, your favorite games are: ' + favoriteGamesArray);
 console.log(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...? Also, your favorite games are: ' + favoriteGamesArray);
