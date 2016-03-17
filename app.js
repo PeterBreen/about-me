@@ -104,7 +104,7 @@ while (guessYearCount < 4) {
     correctGuesses++;
     break;
   } else if (userGuess > 1983) {
-    alert('Your guess was too high. Try a lower number.');
+    alert('Your guess was too high. Try a lower number. I am not that young.');
     console.log('User Guessed Too High: ' + userGuess + ' on guess number ' + guessYearCount);
     guessYearCount++;
   } else if (Number.isNaN(userGuess) === true) {
@@ -112,7 +112,7 @@ while (guessYearCount < 4) {
     alert('Please enter a number, like 2016, not ...whatever you just did.');
     guessYearCount++;
   } else {
-    alert('Your guess was too low. Try a higher number.');
+    alert('Your guess was too low. Try a higher number - I am not that old.');
     console.log('User Guessed Too Low: ' + userGuess + ' on guess number ' + guessYearCount);
     guessYearCount++;
   }
@@ -126,12 +126,11 @@ var favoriteGamesArray = [];
 var numberGamesEntered = 0;
 var currentGameEntry;
 for (i = 0; i < 5; i++) {
-  currentGameEntry = prompt('Please enter one of your favorite board games. I am asking for a total of five.');
+  currentGameEntry = prompt('Please enter one of your favorite games. I am asking for a total of five.');
   favoriteGamesArray.push(currentGameEntry);
   console.log('Current game entry: ' + currentGameEntry);
   console.log('Current array status: ' + favoriteGamesArray);
 }
 /*end of game: tell user how well they did */
-alert(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...?');
-console.log(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...?');
-alert(userName + ', your favorite games are ' + favoriteGamesArray);
+alert(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...? Also, your favorite games are: ' + favoriteGamesArray);
+console.log(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...? Also, your favorite games are: ' + favoriteGamesArray);
