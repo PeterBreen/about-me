@@ -11,7 +11,9 @@ function yourName() {
 //alert('Nice to meet you, ' + userName + '.');
 pTagName.textContent = userName;
 console.log('userName is ' + userName);
+return userName;
 }
+
 //first question
 function joshTreeQuestion () {
 var pTagOne = document.getElementById('ans-one');
@@ -209,8 +211,10 @@ pTagEight.textContent = favoriteGamesArray;
 
 /*end of game: tell user how well they did */
 // alert(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...? Also, your favorite games are: ' + favoriteGamesArray);
+yourName();
 joshTreeQuestion();
 mtRainierQuestion();
+badCommandQuestion();
 haveSiblingQuestion();
 starTrekQuestion();
 yearCountQuestion();
