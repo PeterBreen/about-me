@@ -3,6 +3,7 @@ alert('Nice to meet you, ' + userName + '.');
 console.log('userName is ' + userName);
 
 var correctGuesses = 0;
+var favoriteGamesArray = [];
 
 //first question
 function JoshTreeQuestion () {
@@ -133,7 +134,7 @@ if (userGuess !== 1983 && guessYearCount === 4) {
 }
 //eighth question - collect five strings and put in array */
 function gameArrayQuestion () {
-var favoriteGamesArray = [];
+
 var currentGameEntry;
 for (i = 0; i < 5; i++) {
   currentGameEntry = prompt('Please enter one of your favorite games. I am asking for a total of five.');
