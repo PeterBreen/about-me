@@ -1,3 +1,10 @@
+// Declaring global variables
+var userName;
+var correctGuesses = 0;
+var favoriteGamesArray = [];
+var questionsArray = [];
+var answersArray = [];
+// ask user name
 function yourName() {
   var pTagName = document.getElementById('ans-name');
   var userName = prompt('How about we play a guessing game about me? First, what is your name?');
@@ -5,14 +12,14 @@ function yourName() {
 pTagName.textContent = userName;
 console.log('userName is ' + userName);
 }
-
-var correctGuesses = 0;
-var favoriteGamesArray = [];
-
 //first question
-function JoshTreeQuestion () {
+function joshTreeQuestion () {
 var pTagOne = document.getElementById('ans-one');
-var beenJoshuaTree = prompt('Have I ever been to Joshua Tree?');
+var questionOne = 'Have I ever been to Joshua Tree?';
+var beenJoshuaTree = prompt(questionOne);
+questionsArray.push(questionOne);
+answersArray.push(beenJoshuaTree);
+
 if (beenJoshuaTree.toLowerCase() === 'yes' || beenJoshuaTree.toLowerCase() === 'y') {
   // alert(userName + ', that is right! I have been to Joshua Tree.');
   pTagOne.textContent = 'You are right! I have been to Joshua Tree!';
@@ -32,7 +39,11 @@ if (beenJoshuaTree.toLowerCase() === 'yes' || beenJoshuaTree.toLowerCase() === '
 //second question
 function mtRainierQuestion () {
 var pTagTwo = document.getElementById('ans-two');
-var hikedMountRainier = prompt('Have I ever summited Mt. Rainier?');
+var questionTwo = 'Have I ever summited Mount Rainier?'
+var hikedMountRainier = prompt(questionTwo);
+questionsArray.push(questionTwo);
+answersArray.push(hikedMountRainier);
+
 if (hikedMountRainier.toLowerCase() === 'yes' || hikedMountRainier.toLowerCase() === 'y') {
   // alert(userName + ', that is not right. I have never summited Rainier.');
   pTagTwo.textContent = 'That is incorrect. I have never summited Mount Rainier!';
@@ -52,7 +63,11 @@ if (hikedMountRainier.toLowerCase() === 'yes' || hikedMountRainier.toLowerCase()
 //third question
 function badCommandQuestion () {
 var pTagThree = document.getElementById('ans-three');
-var runBadCommand = prompt('Am I ever going to run \'rm -rf /\' ?');
+var questionThree = 'Am I ever going to run \'rm -rf /\' ?'
+var runBadCommand = prompt(questionThree);
+questionsArray.push(questionThree);
+answersArray.push(runBadCommand);
+
 if (runBadCommand.toLowerCase() === 'yes' || runBadCommand.toLowerCase() === 'y') {
   // alert(userName + ', are you kidding? I will never do that.');
   pTagThree.textContent = 'That is incorrect. I am never doing that!';
@@ -72,7 +87,11 @@ if (runBadCommand.toLowerCase() === 'yes' || runBadCommand.toLowerCase() === 'y'
 //fourth question
 function haveSiblingQuestion () {
 var pTagFour = document.getElementById('ans-four');
-var haveSibling = prompt('Do I have a sibling?');
+var questionFour = 'Do I have a sibling?'
+var haveSibling = prompt(questionFour);
+questionsArray.push(questionFour);
+answersArray.push(haveSibling);
+
 if (haveSibling.toLowerCase() === 'yes' || haveSibling.toLowerCase() === 'y') {
   // alert(userName + ', that is right! I have an older brother.');
   pTagFour.textContent = 'That is right! I have an older brother';
@@ -93,10 +112,17 @@ if (haveSibling.toLowerCase() === 'yes' || haveSibling.toLowerCase() === 'y') {
 function starTrekQuestion () {
 var pTagFive = document.getElementById('ans-five');
 var pTagSix = document.getElementById('ans-six');
-var seenStarTrek = prompt('Do you think I have seen any Star Trek movies?');
+var questionFive = 'Do you think I have seen any Star Trek movies?'
+var questionSix = 'Do you think Star Trek II is my favorite?'
+var seenStarTrek = prompt(questionFive);
+questionsArray.push(questionFive);
+answersArray.push(seenStarTrek);
+
 if (seenStarTrek.toLowerCase() === 'yes' || seenStarTrek.toLowerCase() === 'y') {
   pTagFive.textContent = 'You are right, I have!';
-  var seenYes = prompt(userName + ', how about that? Do you think II is my favorite?');
+  var seenYes = prompt(questionSix);
+  questionsArray.push(questionSix);
+  answersArray.push(seenYes);
   console.log('Q5: ' + userName + ', how about that? Do you think II is my favorite?');
   correctGuesses++;
   console.log('correct guesses: ' + correctGuesses);
@@ -130,14 +156,18 @@ function yearCountQuestion () {
 var pTagSeven = document.getElementById('ans-seven');
 var guessYearCount = 0;
 var userGuess;
+var questionSeven = 'Guess what year I was born in. You have 4 tries. Make sure to enter a number!'
+questionsArray.push(questionSeven);
+
 while (guessYearCount < 4) {
-  userGuess = prompt('Guess what year I was born in. You have 4 tries. Make sure to enter a number!');
+  userGuess = prompt(questionSeven);
   userGuess = parseInt(userGuess);
   if (userGuess === 1983) {
     // alert('You guessed right! Nice work.');
     pTagSeven.textContent = 'You are right! I was born in 1983';
     console.log('User Guessed Correctly on guess number ' + guessYearCount);
     correctGuesses++;
+    answersArray.push([userGuess, guessYearCount]);
     break;
   } else if (userGuess > 1983) {
     // alert('Your guess was too high. Try a lower number. I am not that young.');
@@ -158,23 +188,32 @@ while (guessYearCount < 4) {
 if (userGuess !== 1983 && guessYearCount === 4) {
   // alert('You ran out of guesses! Sorry.');
   pTagSeven.textContent = 'Sorry, you ran out of guesses!';
+  answersArray.push([userGuess, guessYearCount])
 }
 }
 //eighth question - collect five strings and put in array */
 var pTagEight = document.getElementById('ans-eight');
 function gameArrayQuestion () {
-
+var questionEight = 'Please enter one of your favorite games. I am asking for a total of five.'
 var currentGameEntry;
-
+questionsArray.push(questionEight);
 for (i = 0; i < 5; i++) {
-  currentGameEntry = prompt('Please enter one of your favorite games. I am asking for a total of five.');
+  currentGameEntry = prompt(questionEight);
   favoriteGamesArray.push(currentGameEntry);
   console.log('Current game entry: ' + currentGameEntry);
   console.log('Current array status: ' + favoriteGamesArray);
 }
+answersArray.push(favoriteGamesArray);
 pTagEight.textContent = favoriteGamesArray;
 }
 
 /*end of game: tell user how well they did */
 // alert(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...? Also, your favorite games are: ' + favoriteGamesArray);
+joshTreeQuestion();
+mtRainierQuestion();
+haveSiblingQuestion();
+starTrekQuestion();
+yearCountQuestion();
+gameArrayQuestion();
+
 console.log(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...? Also, your favorite games are: ' + favoriteGamesArray);
