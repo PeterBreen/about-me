@@ -21,7 +21,7 @@ if (beenJoshuaTree.toLowerCase() === 'yes' || beenJoshuaTree.toLowerCase() === '
 }
 }
 //second question
-function mtRainierQuestion {
+function mtRainierQuestion () {
 var hikedMountRainier = prompt('Have I ever summited Mt. Rainier?');
 if (hikedMountRainier.toLowerCase() === 'yes' || hikedMountRainier.toLowerCase() === 'y') {
   alert(userName + ', that is not right. I have never summited Rainier.');
@@ -38,7 +38,7 @@ if (hikedMountRainier.toLowerCase() === 'yes' || hikedMountRainier.toLowerCase()
 }
 
 //third question
-function badCommandQuestion {
+function badCommandQuestion () {
 var runBadCommand = prompt('Am I ever going to run \'rm -rf /\' ?');
 if (runBadCommand.toLowerCase() === 'yes' || runBadCommand.toLowerCase() === 'y') {
   alert(userName + ', are you kidding? I will never do that.');
@@ -55,7 +55,7 @@ if (runBadCommand.toLowerCase() === 'yes' || runBadCommand.toLowerCase() === 'y'
 }
 
 //fourth question
-function haveSiblingQuestion {
+function haveSiblingQuestion () {
 var haveSibling = prompt('Do I have a sibling?');
 if (haveSibling.toLowerCase() === 'yes' || haveSibling.toLowerCase() === 'y') {
   alert(userName + ', that is right! I have an older brother.');
@@ -72,7 +72,7 @@ if (haveSibling.toLowerCase() === 'yes' || haveSibling.toLowerCase() === 'y') {
 }
 
 //fifth question - redirect to question six on yes otherwise end
-function starTrekQuestion {
+function starTrekQuestion () {
 var seenStarTrek = prompt('Do you think I have seen any Star Trek movies?');
 if (seenStarTrek.toLowerCase() === 'yes' || seenStarTrek.toLowerCase() === 'y') {
   var seenYes = prompt(userName + ', how about that? Do you think II is my favorite?');
@@ -102,7 +102,7 @@ if (seenStarTrek.toLowerCase() === 'yes' || seenStarTrek.toLowerCase() === 'y') 
 }
 
 //seventh question - four attempts to guess the number
-function yearCountQuestion {
+function yearCountQuestion () {
 var guessYearCount = 0;
 var userGuess;
 while (guessYearCount < 4) {
@@ -132,7 +132,7 @@ if (userGuess !== 1983 && guessYearCount === 4) {
 }
 }
 //eighth question - collect five strings and put in array */
-function gameArrayQuestion {
+function gameArrayQuestion () {
 var favoriteGamesArray = [];
 var currentGameEntry;
 for (i = 0; i < 5; i++) {
