@@ -5,6 +5,7 @@ console.log('userName is ' + userName);
 var correctGuesses = 0;
 
 //first question
+function JoshTreeQuestion () {
 var beenJoshuaTree = prompt('Have I ever been to Joshua Tree?');
 if (beenJoshuaTree.toLowerCase() === 'yes' || beenJoshuaTree.toLowerCase() === 'y') {
   alert(userName + ', that is right! I have been to Joshua Tree.');
@@ -18,8 +19,9 @@ if (beenJoshuaTree.toLowerCase() === 'yes' || beenJoshuaTree.toLowerCase() === '
   alert('Please answer with either yes/no or y/n.');
   console.log('Q1: Please answer with either yes/no or y/n.');
 }
-
+}
 //second question
+function mtRainierQuestion {
 var hikedMountRainier = prompt('Have I ever summited Mt. Rainier?');
 if (hikedMountRainier.toLowerCase() === 'yes' || hikedMountRainier.toLowerCase() === 'y') {
   alert(userName + ', that is not right. I have never summited Rainier.');
@@ -33,8 +35,10 @@ if (hikedMountRainier.toLowerCase() === 'yes' || hikedMountRainier.toLowerCase()
   alert('Please answer with either yes/no or y/n.');
   console.log('Q2: Please answer with either yes/no or y/n.');
 }
+}
 
 //third question
+function badCommandQuestion {
 var runBadCommand = prompt('Am I ever going to run \'rm -rf /\' ?');
 if (runBadCommand.toLowerCase() === 'yes' || runBadCommand.toLowerCase() === 'y') {
   alert(userName + ', are you kidding? I will never do that.');
@@ -48,8 +52,10 @@ if (runBadCommand.toLowerCase() === 'yes' || runBadCommand.toLowerCase() === 'y'
   alert('Please answer with either yes/no or y/n.');
   console.log('Q3: Please answer with either yes/no or y/n.');
 }
+}
 
 //fourth question
+function haveSiblingQuestion {
 var haveSibling = prompt('Do I have a sibling?');
 if (haveSibling.toLowerCase() === 'yes' || haveSibling.toLowerCase() === 'y') {
   alert(userName + ', that is right! I have an older brother.');
@@ -63,8 +69,10 @@ if (haveSibling.toLowerCase() === 'yes' || haveSibling.toLowerCase() === 'y') {
   alert('Please answer with either yes/no or y/n.');
   console.log('Q4: Please answer with either yes/no or y/n.');
 }
+}
 
 //fifth question - redirect to question six on yes otherwise end
+function starTrekQuestion {
 var seenStarTrek = prompt('Do you think I have seen any Star Trek movies?');
 if (seenStarTrek.toLowerCase() === 'yes' || seenStarTrek.toLowerCase() === 'y') {
   var seenYes = prompt(userName + ', how about that? Do you think II is my favorite?');
@@ -91,8 +99,10 @@ if (seenStarTrek.toLowerCase() === 'yes' || seenStarTrek.toLowerCase() === 'y') 
   alert('Please answer with either yes/no or y/n.');
   console.log('Q5: Please answer with either yes/no or y/n.');
 }
+}
 
 //seventh question - four attempts to guess the number
+function yearCountQuestion {
 var guessYearCount = 0;
 var userGuess;
 while (guessYearCount < 4) {
@@ -120,8 +130,9 @@ while (guessYearCount < 4) {
 if (userGuess !== 1983 && guessYearCount === 4) {
   alert('You ran out of guesses! Sorry.');
 }
-
+}
 //eighth question - collect five strings and put in array */
+function gameArrayQuestion {
 var favoriteGamesArray = [];
 var currentGameEntry;
 for (i = 0; i < 5; i++) {
@@ -130,7 +141,7 @@ for (i = 0; i < 5; i++) {
   console.log('Current game entry: ' + currentGameEntry);
   console.log('Current array status: ' + favoriteGamesArray);
 }
-
+}
 /*end of game: tell user how well they did */
 alert(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...? Also, your favorite games are: ' + favoriteGamesArray);
 console.log(userName + ', you got ' + correctGuesses + ' questions out of 7 correct! Nice work...? Also, your favorite games are: ' + favoriteGamesArray);
